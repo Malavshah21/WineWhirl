@@ -1,0 +1,104 @@
+/* Header.css */
+
+/* Navbar */
+.navbar {
+    height: 70px;
+    background-color: #ddcccc;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    margin-right:0 ;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Logo */
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .glogo {
+    max-width: 100px; 
+    max-height: 70px;
+    vertical-align: middle;
+    margin: 0; 
+    height: auto;
+    margin-right: 10px;
+    padding-left: 20px;
+    
+  }
+  
+/* Navigation Elements */
+.navbar-nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 100px;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar-nav ul li {
+  margin-right: 60px;
+}
+
+.navbar-nav ul a {
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease, font-weight 0.3s ease;
+  padding-bottom: 8px;
+}
+
+/* Add underlines and make them bold on hover */
+.navbar-nav ul a:hover {
+  color: black;
+  border-bottom-color: #574c4c;
+  font-weight: bold;
+}
+
+/* Bold for active link */
+.navbar-nav ul a.active {
+  font-weight: bold;
+}
+
+ /*dropdown menu for products*/
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #fffdfd; /* Adjust the background color as needed */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  border-radius: 4px; /* Optional: Add rounded corners */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Optional: Style for the dropdown link */
+.dropdown-content a {
+  color: #333; 
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Optional: Style for the toggle checkbox */
+.toggle {
+  display: none;
+}

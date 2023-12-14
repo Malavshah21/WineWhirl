@@ -1,0 +1,660 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*nav bar*/
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    height: 100%;
+    
+  }
+  
+  .navbar {
+    height: 70px;
+    background-color:#eeeeee;
+    position: relative;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Adding a shadow effect */
+  }
+
+  .nav-elements ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+  
+  .nav-elements ul li:not(:last-child) {
+    margin-right: 60px;
+  }
+  
+  .nav-elements ul a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #2f234f;
+    text-decoration: none;
+  }
+  
+  .nav-elements ul a.active {
+    color: #574c4c;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .nav-elements ul a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #574c4c;
+  }
+
+
+.logo1{
+  width: 90%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensures it's a block element */
+  margin: 0 auto; /* Centers the image horizontally */
+}
+
+
+/*form*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+  background: #eeeeee;
+}
+
+.wrapper{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #f8f0f0;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 30px 0;
+  z-index: 1; /* Adjust the z-index value */
+
+}
+
+.wrapper .title{
+  background: #806261;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 5px;
+  height: 35px;
+  line-height: 38px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.checkout_form{
+  padding: 0 30px;
+}
+
+.checkout_form .input_item input[type="text"]{
+  width: 100%;
+  border: 0;
+  background: transparent;
+  text-align: center;
+  border-bottom: 2px solid #dddddd;
+  padding: 10px;
+  transition: all 0.5s ease;
+  color: #f2483b;
+  font-size: 18px;
+}
+
+.checkout_form .input_item{
+  margin-bottom: 10px;
+}
+
+.input_grp{
+  margin-bottom: 10px;
+}
+
+.input_grp,
+.input_grp .input_item.expiry_field{
+  display: flex;
+  justify-content: space-between;
+}
+
+.input_grp .input_item{
+  width: 45%;
+}
+
+.input_grp .input_item.expiry_field input[type="text"]{
+  width: 45%;
+}
+
+.checkout{
+  width: 150px;
+  background: #fef7e5;
+  margin: 0 auto;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.checkout a{
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 5px;
+  color: #fff;
+}
+
+.checkout_form .input_item input[type="text"]:focus{
+  border-bottom: 2px solid #f2483b;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #dddddd;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #dddddd;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #dddddd;
+}
+
+
+.select-wrapper {
+  width: 60%;
+  margin: 0 auto 15px; /* Center the select box and add some bottom margin */
+}
+
+/* Style the select element */
+.select-wrapper select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Style the options inside the select dropdown */
+.select-wrapper select option {
+  font-size: 16px;
+}
+
+/*new table*/
+.product-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px; /* Adjust the gap between products */
+}
+
+.product {
+  width: calc(24% - 100px); /* Adjust the width of each product */
+  border-radius: 0px;
+  padding: 30px;
+  box-sizing: content-box; /* Remove the border-box */
+  margin-bottom: 50px;
+  overflow: visible; /* Hide overflowing content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a box shadow */
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* Adjust the maximum height of the image */
+  margin-bottom: 10px;
+  border-radius: 0px;
+}
+
+.product-details {
+  text-align: left;
+  width: 100%;
+}
+
+.product-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-type,
+.product-price {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color:  #AA336A;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: calc(100% - 32px); /* Adjust the width for padding */
+  border-radius: 5px; /* Optional: add border-radius */
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #574c4c;
+}
+
+/* CartPage.css */
+
+.cart-container {
+  padding: 10px;
+  text-align: center;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 20px;
+  border-bottom: 0px;
+  text-align: left;
+}
+
+.cart-table th {
+  font-weight: bold;
+}
+
+.cart-table img {
+  width: 50px;
+  height: auto;
+  max-height: 50px;
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.cart-actions button {
+  background-color: #AA336A;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 0px;
+}
+
+.cart-actions button:hover {
+  background-color: #574c4c;
+}
+
+
+/*home*/
+.container-fluid {
+  position: relative;
+  padding-top: 60px;
+}
+
+.image-container {
+  width: 100%;
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.content-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 80%; /* Adjust width as needed */
+}
+
+.content-container h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.content-container p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+/* About.css */
+
+/* Container for the entire About section */
+.about-container {
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  /* Add more styling for background, borders, etc. */
+}
+
+/* Styling for the introductory section */
+.about-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}
+
+/* Introductory text */
+.intro-text {
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* Image accompanying the introductory text */
+.intro-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  /* Add other image styling as needed */
+}
+
+/* Styling for the values section */
+.about-values {
+  margin-top: 50px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.value {
+  text-align: center;
+}
+
+.value img {
+  width: 150px;
+  height: 100px;
+  /* Add other styling for icons */
+}
+
+/* Styling for the team section */
+.about-team {
+  margin-top: 50px;
+}
+
+.team-members {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 200px;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  /* Add other styling for team member images */
+}
+
+/* Styling for the banner */
+.banner {
+  text-align: center; /* Center the image */
+}
+
+.banner img {
+  width: 95%; /* Adjust the width of the image */
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  height: 200px; /* Maintain aspect ratio */
+  /* Add any other styles you want for the banner */
+}
+
+/*contact*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
+div {
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.logo {
+  width: 700px;
+  height: 350px;
+}
+
+.glogo {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 0;
+  top: 0; /* Adjust the top position as needed */
+  margin-left: 20px; 
+}
+
+
+
+/* Styling for RegisterPage */
+.register-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Style for First Name and Last Name on the same line */
+.register-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style for Date of Birth on the same line */
+.dob-inputs {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.dob-inputs input[type="text"] {
+  width: calc(33.33% - 5px);
+}
+
+/* Style for other fields on separate lines */
+.register-form input[type="text"], .register-form input[type="password"], .register-form input[type="email"], .register-form input[type="tel"] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Style for First Name and Last Name on the same line */
+.register-form .name-fields {
+  display: flex;
+  gap: 5px; /* Adjust the gap as needed */
+}
+
+.register-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Adjust the width of the input boxes */
+.register-form input[type="text"] {
+  width: 100%; /* Each input box takes 100% of the available space */
+}
+
+/* Style for Province and Country on the same line */
+.register-form .location-fields {
+  display: flex;
+  gap: 5px; /* Adjust the gap between the location fields */
+}
+
+.register-form .location-field {
+  flex: 1;
+}
+
+.register-form .location-field label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.register-form .location-field input[type="text"] {
+  width: 100%; /* Each input box takes 100% of the available space */
+}
+
+/* Style for Password and Confirm Password on the same line */
+.register-form .password-fields {
+  display: flex;
+  gap: 20px; /* Adjust the gap between the password fields */
+}
+
+.register-form .password-field {
+  flex: 1;
+}
+
+.register-form .password-field label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.register-form .password-field input[type="password"] {
+  width: 100%; /* Each input box takes 100% of the available space */
+}
+
+
+
+/*cart page*/
+
+.cart {
+  width: 80%; 
+  margin: 20px auto; 
+  border-collapse: collapse;
+  table-layout: fixed; 
+  height: 200px; 
+  overflow-y: auto;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-style: hidden;
+  text-align: center;
+}
+
+th {
+  background-color:	#b8b6b0;
+  color: black;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+tr:hover td {
+  border-bottom: 1px solid #A9D6E5;
+}
+
+button {
+  background-color: #AA336A;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
